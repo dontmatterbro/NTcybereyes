@@ -17,10 +17,11 @@ end)
 Hook.Patch("Barotrauma.GUI", "Draw", function(instance, ptable)
 
 		if not HF.HasAffliction(Character.Controlled, "eyeinfrared") then return end
-		
+
 		if thermalHUD==nil then
 			for item in Item.ItemList do
 				if item.Prefab.Identifier == "eyethermalHUDitem" then
+					item.Equip(Character.Controlled)
 					thermalHUD = item.GetComponentString("StatusHUD")
 					break
 				end
