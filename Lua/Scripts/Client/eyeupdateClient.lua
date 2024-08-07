@@ -33,6 +33,47 @@ Hook.Patch("Barotrauma.GUI", "Draw", function(instance, ptable)
 end)
 
 
+--medical eye effect
+Hook.Patch("Barotrauma.GUI", "Draw", function(instance, ptable)
+
+		if not HF.HasAffliction(Character.Controlled, "medicallens") then return end
+
+		if thermalHUD==nil then
+			for item in Item.ItemList do
+				if item.Prefab.Identifier == "eyemedicalHUDitem" then
+					item.Equip(Character.Controlled)
+					thermalHUD = item.GetComponentString("StatusHUD")
+					break
+				end
+			end
+		end
+
+		thermalHUD.DrawHUD(ptable["spriteBatch"], Character.Controlled)
+
+end)
+
+
+--electrical eye effect these need to be written
+Hook.Patch("Barotrauma.GUI", "Draw", function(instance, ptable)
+
+		if not HF.HasAffliction(Character.Controlled, "electricallens") and electricallens==1 then return end
+
+		if thermalHUD==nil then
+			for item in Item.ItemList do
+				if item.Prefab.Identifier == "eyeelectricalHUDitem" then
+					item.Equip(Character.Controlled)
+					thermalHUD = item.GetComponentString("StatusHUD")
+					electricallens = 1
+					break
+				end
+			end
+		end
+
+		thermalHUD.DrawHUD(ptable["spriteBatch"], Character.Controlled)
+
+end)
+
+
 --Eye Effect Check Functions only runs on client
 function NTEYE.UpdateHumanEyeEffect(character)
 --print("debug:UpdateHumanEyeEffect")
