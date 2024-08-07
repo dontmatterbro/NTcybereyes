@@ -41,6 +41,8 @@ HUDitem = "" --What HUD needs to be called ex: eyethermalHUDitem
 	playerHasHUD=1
 end
 
+Hook.Patch("Barotrauma.GUI", "Draw", NTEYE.GetHUD(eyetype, HUDitem, instance, ptable) end)
+
 
 -- infrared eye thermal effect
 Hook.Patch("Barotrauma.GUI", "Draw", function(instance, ptable)
