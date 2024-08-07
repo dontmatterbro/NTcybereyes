@@ -18,11 +18,11 @@ eyetype = "" --What eye does the user have
 HUDitem = "" --What HUD needs to be called ex: eyethermalHUDitem
 --I didnt test this, idek if this is the proper syntax,
 --but what this SHOULD do is work like this;
---If I want the thermal hud, I will call the NTEYE.GetHUD("eyethermal", "eyethermalHUDitem")
+--If I want the thermal hud, I will call the NTEYE.GetHUD("eyeinfrared", "eyethermalHUDitem")
 
 --In any case if this doesn't work it should give you some idea of how to implement it
 
- NTEYE.GetHUD = function(eyetype, HUDitem,instance,ptable)
+ NTEYE.GetHUD = function(eyetype, HUDitem, instance, ptable)
 		
 		if playerHasHUD==1 then return end
 	
@@ -41,7 +41,9 @@ HUDitem = "" --What HUD needs to be called ex: eyethermalHUDitem
 	playerHasHUD=1
 end
 
-Hook.Patch("Barotrauma.GUI", "Draw", NTEYE.GetHUD(eyetype, HUDitem, instance, ptable) end)
+--Maybe this will work for thermal idk
+
+Hook.Patch("Barotrauma.GUI", "Draw", NTEYE.GetHUD("eyeinfrared", "eyethermalHUDitem", instance, ptable) end)
 
 
 -- infrared eye thermal effect
