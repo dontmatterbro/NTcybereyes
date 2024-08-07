@@ -34,6 +34,8 @@ HUDitem = "" --What HUD needs to be called ex: eyethermalHUDitem
 				end
 			end
 		end
+	--thermalHUD.DrawHUD(ptable["spriteBatch"], Character.Controlled)
+end
 
 
 -- infrared eye thermal effect
