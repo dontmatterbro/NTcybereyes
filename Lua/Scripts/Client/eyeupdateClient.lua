@@ -34,7 +34,7 @@ HUDitem = "" --What HUD needs to be called ex: eyethermalHUDitem
 				end
 			end
 		end
-	--thermalHUD.DrawHUD(ptable["spriteBatch"], Character.Controlled)
+	itemHUD.DrawHUD(ptable["spriteBatch"], Character.Controlled)
 end
 
 
@@ -52,7 +52,7 @@ Hook.Patch("Barotrauma.GUI", "Draw", function(instance, ptable)
 			end
 		end
 
-		itemHUD.DrawHUD(ptable["spriteBatch"], Character.Controlled)
+		thermalHUD.DrawHUD(ptable["spriteBatch"], Character.Controlled)
 
 end)
 
