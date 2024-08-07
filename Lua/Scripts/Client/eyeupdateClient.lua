@@ -22,7 +22,7 @@ HUDitem = "" --What HUD needs to be called ex: eyethermalHUDitem
 
 --In any case if this doesn't work it should give you some idea of how to implement it
 
- NTEYE.GetHUD = function(eyetype, HUDitem)
+ NTEYE.GetHUD = function(eyetype, HUDitem,instance,ptable)
 		
 		if playerHasHUD==1 then return end
 	
