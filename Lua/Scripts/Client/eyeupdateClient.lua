@@ -35,6 +35,7 @@ HUDitem = "" --What HUD needs to be called ex: eyethermalHUDitem
 				if item.Prefab.Identifier == HUDitem then
 					item.Equip(Character.Controlled)
 					itemHUD = item.GetComponentString("StatusHUD")
+					playerHasHUD=1
 					break
 				end
 			end
