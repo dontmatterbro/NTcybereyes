@@ -73,6 +73,8 @@ elseif HF.HasAffliction(Character.Controlled, "eyenight") then
         end
  
 elseif HF.HasAffliction(Character.Controlled, "eyeinfrared") then
+			--This is a test of the GetHUD function
+		NTEYE.GetHUD("eyethermal", "eyethermalHUDitem")
 		local parameters = Level.Loaded.LevelData.GenerationParams
 		parameters.AmbientLightColor = Color(25, 0, 75, 40)
 		for k, hull in pairs(Hull.HullList) do
