@@ -17,7 +17,7 @@ eyetype = "" --What eye does the user have
 HUDitem = "" --What HUD needs to be called ex: eyethermalHUDitem
 --I didnt test this, idek if this is the proper syntax,
 --but what this SHOULD do is work like this;
---If I want the thermal hud, I will call the function("eyethermal", "eyethermalHUDitem")
+--If I want the thermal hud, I will call the NTEYE.GetHUD("eyethermal", "eyethermalHUDitem")
 
 --In any case if this doesn't work it should give you some idea of how to implement it
 
