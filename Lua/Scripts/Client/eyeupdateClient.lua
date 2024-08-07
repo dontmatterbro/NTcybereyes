@@ -23,8 +23,10 @@ HUDitem = "" --What HUD needs to be called ex: eyethermalHUDitem
 --In any case if this doesn't work it should give you some idea of how to implement it
 
  NTEYE.GetHUD = function(eyetype, HUDitem)
+
+		itemHUD==nil
 		
-		if playerHasHUD == 1 then return end
+		if playerHasHUD==1 then return end
 	
 		if not HF.HasAffliction(Character.Controlled, eyetype) then return end
 
