@@ -39,6 +39,7 @@
     </MeleeWeapon>
   </Item>
 		<!-- MULTIPURPOSE SCALPEL -->
+	<Override>
 	  <Item name="" identifier="multiscalpel" category="Equipment" cargocontaineridentifier="mediccrate"
           Tags="smallitem,medical,surgery,surgerytool" description="" useinhealthinterface="True" scale="0.250">
     <PreferredContainer primary="toxcontainer" spawnprobability="0.2"/>
@@ -82,8 +83,8 @@
 	    <!-- testing eye scalpel -->
       <Button text="multiscalpel.btn.eyes"><StatusEffect target="This" type="OnUse" stackable="true"><LuaHook name="NT.multiscalpel.eyes"/></StatusEffect></Button>
     </CustomInterface>
-
   </Item>
+	</Override>
   
 		<!-- EYE SPOON -->
   <Item name="" identifier="eyespoon" category="Equipment" Tags="smallitem,simpletool,tool,surgerytool" cargocontaineridentifier="metalcrate" Scale="0.25" impactsoundtag="impact_metal_light" RequireAimToUse="True">
