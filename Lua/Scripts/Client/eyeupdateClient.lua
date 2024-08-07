@@ -12,7 +12,7 @@ Hook.Add("think", "NTEYE.updatetriggerclient", function()
     end
 end)
 
-
+itemHUD=nil
 playerHasHUD = 0
 eyetype = "" --What eye does the user have
 HUDitem = "" --What HUD needs to be called ex: eyethermalHUDitem
@@ -23,8 +23,6 @@ HUDitem = "" --What HUD needs to be called ex: eyethermalHUDitem
 --In any case if this doesn't work it should give you some idea of how to implement it
 
  NTEYE.GetHUD = function(eyetype, HUDitem)
-
-		itemHUD==nil
 		
 		if playerHasHUD==1 then return end
 	
