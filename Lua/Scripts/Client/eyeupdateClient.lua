@@ -42,8 +42,11 @@ HUDitem = "" --What HUD needs to be called ex: eyethermalHUDitem
 end
 
 --Maybe this will work for thermal idk
+--note that eyemedical and electrician do NOT exist yet
 
 Hook.Patch("Barotrauma.GUI", "Draw", NTEYE.GetHUD("eyeinfrared", "eyethermalHUDitem", instance, ptable) end)
+Hook.Patch("Barotrauma.GUI", "Draw", NTEYE.GetHUD("eyemedical", "eyemedicalHUDitem", instance, ptable) end)
+Hook.Patch("Barotrauma.GUI", "Draw", NTEYE.GetHUD("eyeelectrical", "eyeelectricalHUDitem", instance, ptable) end)
 
 
 -- infrared eye thermal effect
