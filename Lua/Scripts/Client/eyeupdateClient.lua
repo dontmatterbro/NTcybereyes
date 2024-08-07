@@ -52,7 +52,7 @@ Hook.Patch("Barotrauma.GUI", "Draw", function(instance, ptable)
 			end
 		end
 
-		thermalHUD.DrawHUD(ptable["spriteBatch"], Character.Controlled)
+		itemHUD.DrawHUD(ptable["spriteBatch"], Character.Controlled)
 
 end)
 
