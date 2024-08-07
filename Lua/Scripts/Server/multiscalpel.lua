@@ -109,6 +109,9 @@ Hook.Add("NT.multiscalpel.bandage", "NT.multiscalpel.bandage", function (effect,
     NT.SetMultiscalpelFunction(item,"bandage") end)
 Hook.Add("NT.multiscalpel.speedflex", "NT.multiscalpel.speedflex", function (effect, deltaTime, item, targets, worldPosition)
     NT.SetMultiscalpelFunction(item,"speedflex") end)
+--test eye scalpel
+Hook.Add("NT.multiscalpel.eyes", "NT.multiscalpel.eyes", function (effect, deltaTime, item, targets, worldPosition)
+    NT.SetMultiscalpelFunction(item,"eyes") end)
 
 
 NT.ItemMethods.multiscalpel = function(item, usingCharacter, targetCharacter, limb) 
@@ -125,6 +128,8 @@ NT.ItemMethods.multiscalpel = function(item, usingCharacter, targetCharacter, li
         lungs=NT.ItemMethods.organscalpel_lungs,
         heart=NT.ItemMethods.organscalpel_heart,
         brain=NT.ItemMethods.organscalpel_brain,
+	--test eye scalpel
+	eyes=NT.ItemMethods.organscalpel_eyes,
         bandage=function(item, usingCharacter, targetCharacter, limb)
             -- remove casts, bandages, and if none of those apply, cause some damage
 
